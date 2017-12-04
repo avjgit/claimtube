@@ -1,0 +1,148 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using VideoAi.Model;
+
+namespace VideoAi.Controllers
+{
+    public class StringTable
+    {
+        public string[] ColumnNames { get; set; }
+        public string[,] Values { get; set; }
+    }
+
+    public class ImageResult
+    {
+        public string[] Categories { get; set; }
+        public string[] Captions { get; set; }
+        public string[] Tags { get; set; }
+        public string PolicyType { get; set; }
+    }
+
+    [Produces("application/json")]
+    [Route("api/image")]
+    public class ImageController : Controller
+    {
+        // GET: api/image/process_image?url{url}
+        [HttpGet("process_image")]
+        public async Task<IActionResult> ProcessImage([FromQuery] string url)
+        {
+            var imageData = await MakeAnalysisRequest(url);
+            imageData.PolicyType = await IdentifyPolicyType(imageData.Tags);
+            return Ok(imageData);
+        }
+
+        public async Task<string> IdentifyPolicyType(string[] tags)
+        {
+            using (var client = new HttpClient())
+            {
+                var scoreRequest = new
+                {
+
+                    Inputs = new Dictionary<string, StringTable>
+                    {
+                        {
+                            "input1",
+                            new StringTable
+                            {
+                                ColumnNames = new []
+                                {
+                                    "Description", "PolicyType"
+                                },
+                                Values = new [,]
+                                {
+                                    {
+                                        "road", "tree"
+                                    },
+                                    {
+                                        "kasko", "home"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    GlobalParameters = new Dictionary<string, string>()
+                };
+                const string apiKey = "jMM04f8sJ+dPAR0WRFUg9YYGTIQIWHS0M7Q7Plgch3DJHKxyP84IONO50EmajmRU4RwPi3oSZ3AL5o/65AH9AQ=="; // Replace this with the API key for the web service
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5137d13885304a649c232737fcde3a4e/services/4d5d56df35fe4c98806cd7183b53086c/execute?api-version=2.0&details=true");
+                
+                var content = new StringContent(JsonConvert.SerializeObject(scoreRequest), Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync("", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string result = await response.Content.ReadAsStringAsync();
+                    return result;
+                }
+                else
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    return responseContent;
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Gets the analysis of the specified image file by using the Computer Vision REST API.
+        /// </summary>
+        /// <param name="url">The image url.</param>
+        static async Task<ImageResult> MakeAnalysisRequest(string url)
+        {
+            HttpClient client = new HttpClient();
+
+            // Request headers.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "33bf53fcbfd74c9a878519518d97f574");
+
+            // Request parameters. A third optional parameter is "details".
+            string requestParameters = "visualFeatures=Categories,Description,Color&language=en";
+
+            // Assemble the URI for the REST API Call.
+            string uri = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze" + "?" + requestParameters;
+
+            // Request body. Posts a locally stored JPEG image.
+            byte[] byteData = GetImageAsByteArray(url)
+                .Result;
+
+            using (ByteArrayContent content = new ByteArrayContent(byteData))
+            {
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+                // Execute the REST API call.
+                var response = await client.PostAsync(uri, content);
+
+                // Get the JSON response.
+                string contentString = await response.Content.ReadAsStringAsync();
+
+                var imageBreakdown = (ImageBreakdown)JsonConvert.DeserializeObject(contentString, typeof(ImageBreakdown));
+
+                return new ImageResult
+                {
+                    Categories = imageBreakdown.Categories.Select(c => c.Name).ToArray(),
+                    Captions = imageBreakdown.Description.Captions.Select(c => c.Text).ToArray(),
+                    Tags = imageBreakdown.Description.Tags
+                };
+            }
+        }
+
+        /// <summary>
+        /// Returns the contents of the specified file as a byte array.
+        /// </summary>
+        /// <param name="url">The image file to read.</param>
+        /// <returns>The byte array of the image data.</returns>
+        static async Task<byte[]> GetImageAsByteArray(string url)
+        {
+            var client = new HttpClient();
+            return await client.GetByteArrayAsync(url);
+        }
+    }
+}

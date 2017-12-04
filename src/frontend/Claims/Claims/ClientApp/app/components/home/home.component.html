@@ -1,16 +1,68 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>
-    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>
-    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>
-    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular app will be rebuilt and a new instance injected into the page.</li>
-    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
-</ul>
+<div class="claims-form">
+    <div class="debug-control">
+        <input id="enableDebug" type="checkbox" [checked]="debug" (change)="debug = !debug" />
+        <label for="enableDebug">Enable Debug</label>
+    </div>
+    <h1>Claim</h1>
+    <div class="client">
+        <h1>Client</h1>
+        <p>
+            Name
+            <b class="text-uppercase">Slāviks</b>
+            <b class="text-uppercase">Caurumiņš</b>
+            (290276-10001)
+        </p>
+    </div>
+    <div class="video">
+        <h1>Video</h1>
+        <label *ngIf='!videoUploaded' class="btn btn-sm btn-primary file-uploader" [class.disabled]='isLoading || loaded'>
+            <input type="file" (change)='onFileSelected($event)' onclick='this.value=null' [disabled]='isLoading || loaded' />
+            <div class="loader-container-small" *ngIf='isLoading || loaded'>
+                <div class="loader"></div>
+            </div>
+            <div class="progress-bar" *ngIf='isLoading || loaded' [style.width]="progress + '%'"></div>
+            <span>Upload video</span>
+        </label>
+        <div class="video-preview" *ngIf='videoUploaded'>
+            <div style='width: 300px; background-color: #ccc; height: 20px;'>
+                <div class="progress-bar" *ngIf='videoUploaded' [style.width]='videoProcessProgress'>
+                    {{videoProcessStatus}}... ({{videoProcessProgress ? videoProcessProgress : '0%'}})
+                </div>
+            </div>
+            <img *ngIf='videoUrl' [src]='videoUrl' width="300" height="200" />
+        </div>
+        <div class="video-results col-ms-3" *ngIf='debug && videoUploaded'>
+            <div *ngFor="let tag of videoTags;">{{ tag }}</div>
+        </div>
+        <div class="image-results col-ms-3" *ngIf='debug && imageProcessed'>
+            <h6>Captions</h6>
+            <div *ngFor="let caption of imageCaptions;">{{ caption }}</div>
+            <h6>Categories</h6>
+            <div *ngFor="let cat of imageCategories;">{{ cat }}</div>
+            <h6>Tags</h6>
+            <div *ngFor="let tag of imageTags;">{{ tag }}</div>
+        </div>
+    </div>
+    <div class="info" *ngIf='imageProcessed'>
+        <h1>Additional information</h1>
+        <div>
+            <label>Insured object (policy)</label>
+            <select>
+                <option class="unknown" value="0">Unknown</option>
+                <option *ngFor="let policy of clientPolicies;" value="policy.number">{{ policy.description }} ({{policy.number}})</option>
+            </select>
+        </div>
+        <div>
+            <label>Date and time of the accident</label>
+            <input class="date" type="text" placeholder="dd.mm.yyyy" />
+            <input class="time" type="text" placeholder="hh:mm" />
+        </div>
+        <div>
+            <label>Location description</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div *ngIf='imageProcessed'>
+        <button class="btn btn-primary">Submit</button>
+    </div>
+</div>
