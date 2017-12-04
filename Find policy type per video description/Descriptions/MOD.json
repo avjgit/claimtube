@@ -1,0 +1,2031 @@
+{
+  "accountId": "b58e7340-fdea-4214-a1f6-131d8f544551",
+  "id": "744e4b46a6",
+  "partition": null,
+  "name": "test1",
+  "description": null,
+  "userName": "Andzejs Gravelis",
+  "createTime": "2017-12-03T13:18:46.9298512+00:00",
+  "organization": "",
+  "privacyMode": "Private",
+  "state": "Processed",
+  "isOwned": true,
+  "isEditable": false,
+  "isBase": true,
+  "durationInSeconds": 65,
+  "summarizedInsights": {
+    "name": "test1",
+    "shortId": "744e4b46a6",
+    "privacyMode": 0,
+    "duration": {
+      "time": "00:01:05",
+      "seconds": 65.0
+    },
+    "thumbnailUrl": "https://www.videoindexer.ai/api/Thumbnail/744e4b46a6/666a1e52-1bca-492d-80d5-97b63c81cfc7",
+    "faces": [],
+    "topics": [{
+      "name": "polygraph",
+      "appearances": [{
+        "startTime": "00:00:00",
+        "endTime": "00:00:00",
+        "startSeconds": 0.0,
+        "endSeconds": 0.0
+      }],
+      "isTranscript": true,
+      "id": 0
+    }, {
+      "name": "city",
+      "appearances": [{
+        "startTime": "00:00:00",
+        "endTime": "00:00:00",
+        "startSeconds": 0.0,
+        "endSeconds": 0.0
+      }],
+      "isTranscript": true,
+      "id": 1
+    }],
+    "sentiments": [{
+      "sentimentKey": "Negative",
+      "appearances": [{
+        "startTime": "00:00:00",
+        "endTime": "00:00:07.2600000",
+        "startSeconds": 0.0,
+        "endSeconds": 7.3
+      }],
+      "seenDurationRatio": 0.11169230769230769
+    }, {
+      "sentimentKey": "Neutral",
+      "appearances": [{
+        "startTime": "00:00:07.2600000",
+        "endTime": "00:00:11.3300000",
+        "startSeconds": 7.3,
+        "endSeconds": 11.3
+      }, {
+        "startTime": "00:00:11.3300000",
+        "endTime": "00:00:18.6700000",
+        "startSeconds": 11.3,
+        "endSeconds": 18.7
+      }, {
+        "startTime": "00:00:18.6700000",
+        "endTime": "00:00:20.9100000",
+        "startSeconds": 18.7,
+        "endSeconds": 20.9
+      }, {
+        "startTime": "00:00:20.9100000",
+        "endTime": "00:00:21.6900000",
+        "startSeconds": 20.9,
+        "endSeconds": 21.7
+      }, {
+        "startTime": "00:00:21.6900000",
+        "endTime": "00:00:24.2100000",
+        "startSeconds": 21.7,
+        "endSeconds": 24.2
+      }, {
+        "startTime": "00:00:24.2100000",
+        "endTime": "00:00:26.2700000",
+        "startSeconds": 24.2,
+        "endSeconds": 26.3
+      }, {
+        "startTime": "00:00:26.3900000",
+        "endTime": "00:00:35.5000000",
+        "startSeconds": 26.4,
+        "endSeconds": 35.5
+      }, {
+        "startTime": "00:00:35.5000000",
+        "endTime": "00:01:05",
+        "startSeconds": 35.5,
+        "endSeconds": 65.0
+      }],
+      "seenDurationRatio": 0.88646153846153841
+    }, {
+      "sentimentKey": "Positive",
+      "appearances": [{
+        "startTime": "00:00:26.2700000",
+        "endTime": "00:00:26.3900000",
+        "startSeconds": 26.3,
+        "endSeconds": 26.4
+      }],
+      "seenDurationRatio": 0.0018461538461538461
+    }],
+    "audioEffects": [{
+      "audioEffectKey": "Silence",
+      "appearances": [{
+        "startTime": "00:00:07.2600000",
+        "endTime": "00:00:11.3300000",
+        "startSeconds": 7.3,
+        "endSeconds": 11.3
+      }, {
+        "startTime": "00:00:26.3900000",
+        "endTime": "00:01:05",
+        "startSeconds": 26.4,
+        "endSeconds": 65.0
+      }],
+      "seenDurationRatio": 0.65538461538461545,
+      "seenDuration": 42.6
+    }, {
+      "audioEffectKey": "Speech",
+      "appearances": [{
+        "startTime": "00:00:00.0400000",
+        "endTime": "00:00:37.4600000",
+        "startSeconds": 0.0,
+        "endSeconds": 37.5
+      }],
+      "seenDurationRatio": 0.57692307692307687,
+      "seenDuration": 37.5
+    }],
+    "annotations": [{
+      "name": "outdoor",
+      "appearances": [{
+        "startTime": "00:00:00.0660000",
+        "endTime": "00:00:26.7600000",
+        "startSeconds": 0.1,
+        "endSeconds": 26.8
+      }, {
+        "startTime": "00:00:32.0980000",
+        "endTime": "00:00:41.7080000",
+        "startSeconds": 32.1,
+        "endSeconds": 41.7
+      }, {
+        "startTime": "00:00:51.3170000",
+        "endTime": "00:00:54.5210000",
+        "startSeconds": 51.3,
+        "endSeconds": 54.5
+      }]
+    }, {
+      "name": "sky",
+      "appearances": [{
+        "startTime": "00:00:00.0660000",
+        "endTime": "00:00:24.6240000",
+        "startSeconds": 0.1,
+        "endSeconds": 24.6
+      }, {
+        "startTime": "00:00:36.3690000",
+        "endTime": "00:00:39.5720000",
+        "startSeconds": 36.4,
+        "endSeconds": 39.6
+      }]
+    }, {
+      "name": "road",
+      "appearances": [{
+        "startTime": "00:00:00.0660000",
+        "endTime": "00:00:26.7600000",
+        "startSeconds": 0.1,
+        "endSeconds": 26.8
+      }]
+    }, {
+      "name": "scene",
+      "appearances": [{
+        "startTime": "00:00:00.0660000",
+        "endTime": "00:00:26.7600000",
+        "startSeconds": 0.1,
+        "endSeconds": 26.8
+      }]
+    }, {
+      "name": "way",
+      "appearances": [{
+        "startTime": "00:00:00.0660000",
+        "endTime": "00:00:26.7600000",
+        "startSeconds": 0.1,
+        "endSeconds": 26.8
+      }]
+    }, {
+      "name": "car mirror",
+      "appearances": [{
+        "startTime": "00:00:25.6920000",
+        "endTime": "00:00:33.1660000",
+        "startSeconds": 25.7,
+        "endSeconds": 33.2
+      }]
+    }, {
+      "name": "snow",
+      "appearances": [{
+        "startTime": "00:00:34.2330000",
+        "endTime": "00:00:41.7080000",
+        "startSeconds": 34.2,
+        "endSeconds": 41.7
+      }]
+    }, {
+      "name": "mirror",
+      "appearances": [{
+        "startTime": "00:00:21.4210000",
+        "endTime": "00:00:22.4890000",
+        "startSeconds": 21.4,
+        "endSeconds": 22.5
+      }, {
+        "startTime": "00:00:25.6920000",
+        "endTime": "00:00:31.0310000",
+        "startSeconds": 25.7,
+        "endSeconds": 31.0
+      }]
+    }, {
+      "name": "indoor",
+      "appearances": [{
+        "startTime": "00:00:49.1820000",
+        "endTime": "00:00:52.3850000",
+        "startSeconds": 49.2,
+        "endSeconds": 52.4
+      }]
+    }, {
+      "name": "tree",
+      "appearances": [{
+        "startTime": "00:00:23.5560000",
+        "endTime": "00:00:24.6240000",
+        "startSeconds": 23.6,
+        "endSeconds": 24.6
+      }]
+    }],
+    "brands": []
+  },
+  "breakdowns": [{
+    "accountId": "b58e7340-fdea-4214-a1f6-131d8f544551",
+    "id": "744e4b46a6",
+    "state": "Processed",
+    "processingProgress": "10%",
+    "failureCode": "General",
+    "failureMessage": "",
+    "externalId": null,
+    "externalUrl": null,
+    "metadata": null,
+    "insights": {
+      "transcriptBlocks": [{
+        "id": 0,
+        "lines": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:00",
+            "end": "00:00:07.2600000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:00",
+            "end": "00:00:07.2600000"
+          },
+          "participantId": 1,
+          "text": "It could be ignored him doc old are possible polygraph to come up with the city of useful in finding it.",
+          "isIncluded": true,
+          "confidence": 0.882445980952381
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.16618528962135315,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:00.0400000",
+              "end": "00:00:07.2600000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:00",
+            "end": "00:00:07.2600000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:00",
+              "end": "00:00:07.2600000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:00.0660000",
+            "end": "00:00:01.1340000"
+          }, {
+            "start": "00:00:02.2010000",
+            "end": "00:00:03.2690000"
+          }, {
+            "start": "00:00:04.3370000",
+            "end": "00:00:05.4050000"
+          }, {
+            "start": "00:00:06.4720000",
+            "end": "00:00:07.2600000"
+          }]
+        }]
+      }, {
+        "id": 1,
+        "lines": [{
+          "id": 1,
+          "timeRange": {
+            "start": "00:00:07.2600000",
+            "end": "00:00:11.3300000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:07.2600000",
+            "end": "00:00:11.3300000"
+          },
+          "participantId": -2,
+          "text": "",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.0,
+        "faces": [],
+        "ocrs": [{
+          "timeRange": {
+            "start": "00:00:07.8750000",
+            "end": "00:00:43.3100000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:07.8750000",
+            "end": "00:00:11.3300000"
+          },
+          "lines": [{
+            "id": 0,
+            "width": 0,
+            "height": 0,
+            "language": "Spanish",
+            "textData": "unvnu",
+            "confidence": 292.75
+          }]
+        }],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:07.2600000",
+              "end": "00:00:07.2600000"
+            }
+          }]
+        }, {
+          "type": 5,
+          "ranges": [{
+            "type": 5,
+            "timeRange": {
+              "start": "00:00:07.2600000",
+              "end": "00:00:11.3300000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:07.2600000",
+            "end": "00:00:11.3300000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:07.2600000",
+              "end": "00:00:11.3300000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:07.2600000",
+            "end": "00:00:07.5400000"
+          }, {
+            "start": "00:00:08.6080000",
+            "end": "00:00:09.6760000"
+          }, {
+            "start": "00:00:10.7430000",
+            "end": "00:00:11.3300000"
+          }]
+        }]
+      }, {
+        "id": 2,
+        "lines": [{
+          "id": 2,
+          "timeRange": {
+            "start": "00:00:11.3300000",
+            "end": "00:00:17.2400000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:11.3300000",
+            "end": "00:00:17.2400000"
+          },
+          "participantId": 1,
+          "text": "My son on the bodies of the",
+          "isIncluded": true,
+          "confidence": 0.90371428571428569
+        }, {
+          "id": 3,
+          "timeRange": {
+            "start": "00:00:17.2400000",
+            "end": "00:00:18.6700000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:17.2400000",
+            "end": "00:00:18.6700000"
+          },
+          "participantId": 1,
+          "text": "answer will shield.",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.5,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:11.3300000",
+              "end": "00:00:18.6700000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:11.3300000",
+            "end": "00:00:18.6700000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:11.3300000",
+              "end": "00:00:18.6700000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:11.3300000",
+            "end": "00:00:11.8110000"
+          }, {
+            "start": "00:00:12.8790000",
+            "end": "00:00:13.9470000"
+          }, {
+            "start": "00:00:15.0140000",
+            "end": "00:00:16.0820000"
+          }, {
+            "start": "00:00:17.1500000",
+            "end": "00:00:18.2180000"
+          }]
+        }]
+      }, {
+        "id": 3,
+        "lines": [{
+          "id": 4,
+          "timeRange": {
+            "start": "00:00:18.6700000",
+            "end": "00:00:20.9100000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:18.6700000",
+            "end": "00:00:20.9100000"
+          },
+          "participantId": -2,
+          "text": "",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.0,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:18.6700000",
+              "end": "00:00:18.6700000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:18.6700000",
+            "end": "00:00:20.9100000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:18.6700000",
+              "end": "00:00:20.9100000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:19.2850000",
+            "end": "00:00:20.3530000"
+          }]
+        }]
+      }, {
+        "id": 4,
+        "lines": [{
+          "id": 5,
+          "timeRange": {
+            "start": "00:00:20.9100000",
+            "end": "00:00:21.6900000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:20.9100000",
+            "end": "00:00:21.6900000"
+          },
+          "participantId": 1,
+          "text": "Yes, use gold.",
+          "isIncluded": true,
+          "confidence": 0.32933333333333331
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.5,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:20.9100000",
+              "end": "00:00:21.6900000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:20.9100000",
+            "end": "00:00:21.6900000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:20.9100000",
+              "end": "00:00:21.6900000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }, {
+          "name": "mirror",
+          "timeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.4210000",
+            "end": "00:00:21.6900000"
+          }]
+        }]
+      }, {
+        "id": 5,
+        "lines": [{
+          "id": 6,
+          "timeRange": {
+            "start": "00:00:21.6900000",
+            "end": "00:00:24.2100000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:21.6900000",
+            "end": "00:00:24.2100000"
+          },
+          "participantId": -2,
+          "text": "",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.0,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:21.6900000",
+              "end": "00:00:21.6900000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:21.6900000",
+            "end": "00:00:24.2100000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:21.6900000",
+              "end": "00:00:24.2100000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }, {
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }, {
+          "name": "mirror",
+          "timeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:21.6900000",
+            "end": "00:00:22.4890000"
+          }]
+        }, {
+          "name": "tree",
+          "timeRanges": [{
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:23.5560000",
+            "end": "00:00:24.2100000"
+          }]
+        }]
+      }, {
+        "id": 6,
+        "lines": [{
+          "id": 7,
+          "timeRange": {
+            "start": "00:00:24.2100000",
+            "end": "00:00:26.2700000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:24.2100000",
+            "end": "00:00:26.2700000"
+          },
+          "participantId": 1,
+          "text": "Why do dinner?",
+          "isIncluded": true,
+          "confidence": 0.59100000000000008
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.24694949388504028,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:24.2100000",
+              "end": "00:00:25.0700000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:24.2100000",
+            "end": "00:00:26.2700000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:24.2100000",
+              "end": "00:00:26.2700000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }, {
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }, {
+          "name": "mirror",
+          "timeRanges": [{
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }, {
+          "name": "tree",
+          "timeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:24.2100000",
+            "end": "00:00:24.6240000"
+          }]
+        }, {
+          "name": "car mirror",
+          "timeRanges": [{
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:25.6920000",
+            "end": "00:00:26.2700000"
+          }]
+        }]
+      }, {
+        "id": 7,
+        "lines": [{
+          "id": 8,
+          "timeRange": {
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          },
+          "participantId": 2,
+          "text": "thank me.",
+          "isIncluded": true,
+          "confidence": 0.85928145
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.9984090924263,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:26.2700000",
+              "end": "00:00:26.3900000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:26.2700000",
+              "end": "00:00:26.3900000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }, {
+          "name": "mirror",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }, {
+          "name": "car mirror",
+          "timeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.2700000",
+            "end": "00:00:26.3900000"
+          }]
+        }]
+      }, {
+        "id": 8,
+        "lines": [{
+          "id": 9,
+          "timeRange": {
+            "start": "00:00:26.3900000",
+            "end": "00:00:35.5000000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:26.3900000",
+            "end": "00:00:35.5000000"
+          },
+          "participantId": -2,
+          "text": "",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.0,
+        "faces": [],
+        "ocrs": [],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:26.3900000",
+              "end": "00:00:26.3900000"
+            }
+          }]
+        }, {
+          "type": 5,
+          "ranges": [{
+            "type": 5,
+            "timeRange": {
+              "start": "00:00:26.3900000",
+              "end": "00:00:35.5000000"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:26.3900000",
+            "end": "00:00:35.5000000"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 0,
+            "timeRange": {
+              "start": "00:00:26.3900000",
+              "end": "00:00:30.2630000"
+            },
+            "keyFrame": "00:00:15.8830000"
+          }, {
+            "id": 1,
+            "timeRange": {
+              "start": "00:00:30.2630000",
+              "end": "00:00:35.5000000"
+            },
+            "keyFrame": "00:00:47.9810000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:32.0980000",
+            "end": "00:00:33.1660000"
+          }, {
+            "start": "00:00:34.2330000",
+            "end": "00:00:35.3010000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:32.0980000",
+            "end": "00:00:33.1660000"
+          }, {
+            "start": "00:00:34.2330000",
+            "end": "00:00:35.3010000"
+          }]
+        }, {
+          "name": "road",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }]
+        }, {
+          "name": "scene",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }]
+        }, {
+          "name": "way",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }]
+        }, {
+          "name": "mirror",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:27.8270000",
+            "end": "00:00:28.8950000"
+          }, {
+            "start": "00:00:29.9630000",
+            "end": "00:00:31.0310000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:27.8270000",
+            "end": "00:00:28.8950000"
+          }, {
+            "start": "00:00:29.9630000",
+            "end": "00:00:31.0310000"
+          }]
+        }, {
+          "name": "car mirror",
+          "timeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:27.8270000",
+            "end": "00:00:28.8950000"
+          }, {
+            "start": "00:00:29.9630000",
+            "end": "00:00:31.0310000"
+          }, {
+            "start": "00:00:32.0980000",
+            "end": "00:00:33.1660000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:26.3900000",
+            "end": "00:00:26.7600000"
+          }, {
+            "start": "00:00:27.8270000",
+            "end": "00:00:28.8950000"
+          }, {
+            "start": "00:00:29.9630000",
+            "end": "00:00:31.0310000"
+          }, {
+            "start": "00:00:32.0980000",
+            "end": "00:00:33.1660000"
+          }]
+        }, {
+          "name": "snow",
+          "timeRanges": [{
+            "start": "00:00:34.2330000",
+            "end": "00:00:35.3010000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:34.2330000",
+            "end": "00:00:35.3010000"
+          }]
+        }]
+      }, {
+        "id": 9,
+        "lines": [{
+          "id": 10,
+          "timeRange": {
+            "start": "00:00:35.5000000",
+            "end": "00:00:36.3500000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:35.5000000",
+            "end": "00:00:36.3500000"
+          },
+          "participantId": 3,
+          "text": "Let me see I was wrong,",
+          "isIncluded": true,
+          "confidence": 0.78824315
+        }, {
+          "id": 11,
+          "timeRange": {
+            "start": "00:00:36.3500000",
+            "end": "00:00:37.4600000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:36.3500000",
+            "end": "00:00:37.4600000"
+          },
+          "participantId": 3,
+          "text": "but the renewable.",
+          "isIncluded": true,
+          "confidence": 0.5760142
+        }, {
+          "id": 12,
+          "timeRange": {
+            "start": "00:00:37.4600000",
+            "end": "00:01:05"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:37.4600000",
+            "end": "00:01:05"
+          },
+          "participantId": 3,
+          "text": "",
+          "isIncluded": true,
+          "confidence": 1.0
+        }],
+        "sentimentIds": [],
+        "thumbnailsIds": [],
+        "sentiment": 0.5,
+        "faces": [],
+        "ocrs": [{
+          "timeRange": {
+            "start": "00:00:43.3100000",
+            "end": "00:00:45.2790000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:43.3100000",
+            "end": "00:00:45.2790000"
+          },
+          "lines": [{
+            "id": 3,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "Последствия:",
+            "confidence": 997.0
+          }, {
+            "id": 4,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "вмятина у ручки",
+            "confidence": 947.38461538461536
+          }, {
+            "id": 5,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "открывания двери",
+            "confidence": 890.33333333333326
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:00:47.2470000",
+            "end": "00:00:49.2160000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:47.2470000",
+            "end": "00:00:49.2160000"
+          },
+          "lines": [{
+            "id": 8,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "Погнутый диск",
+            "confidence": 927.33333333333326
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:00:49.2160000",
+            "end": "00:00:53.1530000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:49.2160000",
+            "end": "00:00:53.1530000"
+          },
+          "lines": [{
+            "id": 9,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "треснутый бампер",
+            "confidence": 740.90414746543775
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:00:53.1530000",
+            "end": "00:00:55.1220000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:53.1530000",
+            "end": "00:00:55.1220000"
+          },
+          "lines": [{
+            "id": 11,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "защита",
+            "confidence": 999.0
+          }, {
+            "id": 12,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "двигателя",
+            "confidence": 994.0
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:00:55.1220000",
+            "end": "00:00:57.0900000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:55.1220000",
+            "end": "00:00:57.0900000"
+          },
+          "lines": [{
+            "id": 13,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "ддв&гател",
+            "confidence": 314.0
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:00:57.0900000",
+            "end": "00:00:59.0590000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:00:57.0900000",
+            "end": "00:00:59.0590000"
+          },
+          "lines": [{
+            "id": 14,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "Оторванный правый передний",
+            "confidence": 997.5
+          }, {
+            "id": 15,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "подкры ок..,",
+            "confidence": 594.27272727272725
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:01:01.0280000",
+            "end": "00:01:02.9960000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:01:01.0280000",
+            "end": "00:01:02.9960000"
+          },
+          "lines": [{
+            "id": 17,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "левы",
+            "confidence": 999.0
+          }, {
+            "id": 18,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "дний подкры",
+            "confidence": 696.0
+          }]
+        }, {
+          "timeRange": {
+            "start": "00:01:04.9650000",
+            "end": "00:01:04.9980000"
+          },
+          "adjustedTimeRange": {
+            "start": "00:01:04.9650000",
+            "end": "00:01:04.9980000"
+          },
+          "lines": [{
+            "id": 22,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "Водитель отделался лёгким",
+            "confidence": 995.91304347826087
+          }, {
+            "id": 23,
+            "width": 0,
+            "height": 0,
+            "language": "Russian",
+            "textData": "испугом",
+            "confidence": 994.0
+          }]
+        }],
+        "audioEffectInstances": [{
+          "type": 4,
+          "ranges": [{
+            "type": 4,
+            "timeRange": {
+              "start": "00:00:35.5000000",
+              "end": "00:00:37.4600000"
+            }
+          }]
+        }, {
+          "type": 5,
+          "ranges": [{
+            "type": 5,
+            "timeRange": {
+              "start": "00:00:37.4600000",
+              "end": "00:01:05"
+            }
+          }]
+        }],
+        "scenes": [{
+          "id": 0,
+          "timeRange": {
+            "start": "00:00:35.5000000",
+            "end": "00:01:05"
+          },
+          "keyFrame": "00:00:47.9810000",
+          "shots": [{
+            "id": 1,
+            "timeRange": {
+              "start": "00:00:35.5000000",
+              "end": "00:01:05"
+            },
+            "keyFrame": "00:00:47.9810000"
+          }]
+        }],
+        "annotations": [{
+          "name": "outdoor",
+          "timeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }, {
+            "start": "00:00:40.6400000",
+            "end": "00:00:41.7080000"
+          }, {
+            "start": "00:00:51.3170000",
+            "end": "00:00:52.3850000"
+          }, {
+            "start": "00:00:53.4530000",
+            "end": "00:00:54.5210000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }, {
+            "start": "00:00:40.6400000",
+            "end": "00:00:41.7080000"
+          }, {
+            "start": "00:00:51.3170000",
+            "end": "00:00:52.3850000"
+          }, {
+            "start": "00:00:53.4530000",
+            "end": "00:00:54.5210000"
+          }]
+        }, {
+          "name": "sky",
+          "timeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }]
+        }, {
+          "name": "snow",
+          "timeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }, {
+            "start": "00:00:40.6400000",
+            "end": "00:00:41.7080000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:36.3690000",
+            "end": "00:00:37.4370000"
+          }, {
+            "start": "00:00:38.5040000",
+            "end": "00:00:39.5720000"
+          }, {
+            "start": "00:00:40.6400000",
+            "end": "00:00:41.7080000"
+          }]
+        }, {
+          "name": "indoor",
+          "timeRanges": [{
+            "start": "00:00:49.1820000",
+            "end": "00:00:50.2500000"
+          }, {
+            "start": "00:00:51.3170000",
+            "end": "00:00:52.3850000"
+          }],
+          "adjustedTimeRanges": [{
+            "start": "00:00:49.1820000",
+            "end": "00:00:50.2500000"
+          }, {
+            "start": "00:00:51.3170000",
+            "end": "00:00:52.3850000"
+          }]
+        }]
+      }],
+      "topics": [{
+        "id": 0,
+        "name": "polygraph",
+        "stem": "polygraph",
+        "words": ["polygraph"],
+        "rank": 1.0
+      }, {
+        "id": 1,
+        "name": "city",
+        "stem": "city",
+        "words": ["city"],
+        "rank": 1.0
+      }],
+      "brands": [],
+      "faces": [],
+      "participants": [{
+        "id": 1,
+        "name": "Speaker #1",
+        "pictureUrl": null
+      }, {
+        "id": 2,
+        "name": "Speaker #2",
+        "pictureUrl": null
+      }, {
+        "id": 3,
+        "name": "Speaker #3",
+        "pictureUrl": null
+      }],
+      "contentModeration": {
+        "adultClassifierValue": 0.00031,
+        "racyClassifierValue": 0.0027,
+        "bannedWordsCount": 0,
+        "bannedWordsRatio": 0.0,
+        "reviewRecommended": false,
+        "isAdult": false
+      },
+      "audioEffectsCategories": [{
+        "type": 5,
+        "key": "Silence"
+      }, {
+        "type": 4,
+        "key": "Speech"
+      }]
+    },
+    "thumbnailUrl": "https://www.videoindexer.ai/api/Thumbnail/744e4b46a6/666a1e52-1bca-492d-80d5-97b63c81cfc7",
+    "publishedUrl": "https://rodmandev.streaming.mediaservices.windows.net:443/3a194ce9-8145-495f-8609-bc264fdbbe59/test1.ism/manifest",
+    "viewToken": "Bearer=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cm46bWljcm9zb2Z0OmF6dXJlOm1lZGlhc2VydmljZXM6Y29udGVudGtleWlkZW50aWZpZXIiOiJkMzRkZTQwNi00MjkwLTQxZDItODgzNC1kMjUxZGIxZWY3MWEiLCJpc3MiOiJodHRwczovL2JyZWFrZG93bi5tZSIsImF1ZCI6IkJyZWFrZG93blVzZXIiLCJleHAiOjE1MTI0NjIyNjUsIm5iZiI6MTUxMjM3NTgwNX0.qb0Kn-8hBu9sudPVoMWvB2pOaYeoHRbc7yfgxj-7I_o",
+    "sourceLanguage": "en-US",
+    "language": "en-US"
+  }],
+  "social": {
+    "likedByUser": false,
+    "likes": 0,
+    "views": 3
+  }
+}
