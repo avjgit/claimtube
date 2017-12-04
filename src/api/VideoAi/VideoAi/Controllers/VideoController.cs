@@ -92,7 +92,7 @@ namespace VideoAi.Controllers
 
                     section = await reader.ReadNextSectionAsync();
 
-                    var response = await CreateClient().PostAsync("?name=test1&privacy=Private&videoUrl=http://coreappag1.azurewebsites.net/api/video/1", null);
+                    var response = await CreateClient().PostAsync("?name=test1&privacy=Private&videoUrl=http://hackif2017agapi.azurewebsites.net/api/video/1", null);
                     var contents = await response.Content.ReadAsStringAsync();
 
                     await HttpContext.Response.WriteAsync(contents);
