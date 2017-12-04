@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Component({
@@ -6,8 +6,9 @@ import { Http } from '@angular/http';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     urlToUpload: string = 'http://hackif2017agapi.azurewebsites.net/api/';
+    //urlToUpload: string = 'http://localhost:32765/api/';
     progress: number = 0;
     isLoading: boolean = false;
     loaded: boolean = false;
@@ -19,14 +20,25 @@ export class HomeComponent {
     videoProcessProgress: string;
     videoTags: string[];
 
+    debug: boolean = true;
     imageProcessed: boolean = false;
     imageCaptions: string[];
     imageCategories: string[];
     imageTags: string[];
 
+    clientPolicies: any[];
+
     constructor(
         private http: Http,
         private changeDetector: ChangeDetectorRef) { }
+
+    ngOnInit(): void {
+        this.http.get(this.urlToUpload + 'policies')
+            .subscribe(result => {
+                this.clientPolicies = result.json();
+            },
+            error => console.error(error));
+    }
 
     onFileSelected(event: any): void {
         var files: any = event.target.files;

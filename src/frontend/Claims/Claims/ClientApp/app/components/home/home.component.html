@@ -1,18 +1,35 @@
-<div>
+<div class="claims-form">
+    <div class="debug-control">
+        <input id="enableDebug" type="checkbox" [checked]="debug" (change)="debug = !debug" />
+        <label for="enableDebug">Enable Debug</label>
+    </div>
     <h1>Claim</h1>
-    <label class="btn btn-sm btn-primary file-uploader" [class.disabled]='isLoading || loaded'>
-        <input type="file" (change)='onFileSelected($event)' onclick='this.value=null' [disabled]='isLoading || loaded' />
-        <div class="loader-container-small" *ngIf='isLoading || loaded'>
-            <div class="loader"></div>
-        </div>
-        <div class="progress-bar" *ngIf='isLoading || loaded' [style.width]="progress + '%'"></div>
-        <span>Upload video</span>
-    </label>
-    <br/>
-    <br/>
-    <div class="row">
+    <div class="client">
+        <h1>Client</h1>
+        <p>
+            Name
+            <b class="text-uppercase">Slāviks</b>
+        </p>
+        <p>
+            Surname
+            <b class="text-uppercase">Caurumiņš</b>
+        </p>
+        <p>
+            Code
+            <b>290276-10001</b>
+        </p>
+    </div>
+    <div class="video">
+        <h1>Video</h1>
+        <label *ngIf='!videoUploaded' class="btn btn-sm btn-primary file-uploader" [class.disabled]='isLoading || loaded'>
+            <input type="file" (change)='onFileSelected($event)' onclick='this.value=null' [disabled]='isLoading || loaded' />
+            <div class="loader-container-small" *ngIf='isLoading || loaded'>
+                <div class="loader"></div>
+            </div>
+            <div class="progress-bar" *ngIf='isLoading || loaded' [style.width]="progress + '%'"></div>
+            <span>Upload video</span>
+        </label>
         <div class="video-preview" *ngIf='videoUploaded'>
-            <h1>Video AI</h1>
             <div style='width: 300px; background-color: #ccc; height: 20px;'>
                 <div class="progress-bar" *ngIf='videoUploaded' [style.width]='videoProcessProgress'>
                     {{videoProcessStatus}}... ({{videoProcessProgress ? videoProcessProgress : '0%'}})
@@ -20,11 +37,10 @@
             </div>
             <img *ngIf='videoUrl' [src]='videoUrl' width="300" height="200" />
         </div>
-        <div class="video-results col-ms-3" *ngIf='videoUploaded'>
+        <div class="video-results col-ms-3" *ngIf='debug && videoUploaded'>
             <div *ngFor="let tag of videoTags;">{{ tag }}</div>
         </div>
-        <div class="image-results col-ms-3" *ngIf='imageProcessed'>
-            <h1>Image AI</h1>
+        <div class="image-results col-ms-3" *ngIf='debug && imageProcessed'>
             <h6>Captions</h6>
             <div *ngFor="let caption of imageCaptions;">{{ caption }}</div>
             <h6>Categories</h6>
@@ -32,5 +48,27 @@
             <h6>Tags</h6>
             <div *ngFor="let tag of imageTags;">{{ tag }}</div>
         </div>
+    </div>
+    <div class="info">
+        <h1>Additional information</h1>
+        <div>
+            <label>Insured object (policy)</label>
+            <select>
+                <option class="unknown" value="0">Unknown</option>
+                <option *ngFor="let policy of clientPolicies;" value="policy.number">{{ policy.description }} ({{policy.number}})</option>
+            </select>
+        </div>
+        <div>
+            <label>Date and time of the accident</label>
+            <input class="date" type="text" placeholder="dd.mm.yyyy" />
+            <input class="time" type="text" placeholder="hh:mm" />
+        </div>
+        <div>
+            <label>Location description</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary">Submit</button>
     </div>
 </div>

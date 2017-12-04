@@ -19,8 +19,9 @@
     width: 0;
 }
 
-
-
+.claims-form {
+    padding: 0 20px 40px 20px;
+}
 
 .loader {
     font-size: 10px;
@@ -165,4 +166,39 @@
     width: 300px;
     display: inline-block;
     vertical-align: top;
+}
+
+.client,
+.video,
+.info {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin: 20px 0;
+    vertical-align: top;
+}
+
+.client h1,
+.video h1,
+.info h1 {
+    position: relative;
+    top: -30px;
+    font-size: 16px;
+    margin: 0;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    color: #aaa;
+}
+
+.debug-control {
+    float: right;
+    padding: 20px 50px;
+}
+
+.info label {
+    width: 220px;
+}
+
+.info textarea {
+    width: 310px;
 }
