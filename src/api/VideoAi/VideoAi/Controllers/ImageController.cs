@@ -1,13 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using VideoAi.Model;
 
 namespace VideoAi.Controllers
 {
+    public class StringTable
+    {
+        public string[] ColumnNames { get; set; }
+        public string[,] Values { get; set; }
+    }
+
+    public class ImageResult
+    {
+        public string[] Categories { get; set; }
+        public string[] Captions { get; set; }
+        public string[] Tags { get; set; }
+        public string PolicyType { get; set; }
+    }
+
     [Produces("application/json")]
     [Route("api/image")]
     public class ImageController : Controller
@@ -16,16 +33,68 @@ namespace VideoAi.Controllers
         [HttpGet("process_image")]
         public async Task<IActionResult> ProcessImage([FromQuery] string url)
         {
-            var response = await MakeAnalysisRequest(url);
-
-            return Ok(response);
+            var imageData = await MakeAnalysisRequest(url);
+            imageData.PolicyType = await IdentifyPolicyType(imageData.Tags);
+            return Ok(imageData);
         }
 
+        public async Task<string> IdentifyPolicyType(string[] tags)
+        {
+            using (var client = new HttpClient())
+            {
+                var scoreRequest = new
+                {
+
+                    Inputs = new Dictionary<string, StringTable>
+                    {
+                        {
+                            "input1",
+                            new StringTable
+                            {
+                                ColumnNames = new []
+                                {
+                                    "Description", "PolicyType"
+                                },
+                                Values = new [,]
+                                {
+                                    {
+                                        "road", "tree"
+                                    },
+                                    {
+                                        "kasko", "home"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    GlobalParameters = new Dictionary<string, string>()
+                };
+                const string apiKey = "jMM04f8sJ+dPAR0WRFUg9YYGTIQIWHS0M7Q7Plgch3DJHKxyP84IONO50EmajmRU4RwPi3oSZ3AL5o/65AH9AQ=="; // Replace this with the API key for the web service
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5137d13885304a649c232737fcde3a4e/services/4d5d56df35fe4c98806cd7183b53086c/execute?api-version=2.0&details=true");
+                
+                var content = new StringContent(JsonConvert.SerializeObject(scoreRequest), Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync("", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string result = await response.Content.ReadAsStringAsync();
+                    return result;
+                }
+                else
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    return responseContent;
+                }
+            }
+        }
+        
         /// <summary>
         /// Gets the analysis of the specified image file by using the Computer Vision REST API.
         /// </summary>
         /// <param name="url">The image url.</param>
-        static async Task<object> MakeAnalysisRequest(string url)
+        static async Task<ImageResult> MakeAnalysisRequest(string url)
         {
             HttpClient client = new HttpClient();
 
@@ -56,11 +125,11 @@ namespace VideoAi.Controllers
 
                 var imageBreakdown = (ImageBreakdown)JsonConvert.DeserializeObject(contentString, typeof(ImageBreakdown));
 
-                return new
+                return new ImageResult
                 {
-                    categories = imageBreakdown.Categories.Select(c => c.Name),
-                    captions = imageBreakdown.Description.Captions.Select(c => c.Text),
-                    tags = imageBreakdown.Description.Tags
+                    Categories = imageBreakdown.Categories.Select(c => c.Name).ToArray(),
+                    Captions = imageBreakdown.Description.Captions.Select(c => c.Text).ToArray(),
+                    Tags = imageBreakdown.Description.Tags
                 };
             }
         }

@@ -9,14 +9,8 @@
         <p>
             Name
             <b class="text-uppercase">Slāviks</b>
-        </p>
-        <p>
-            Surname
             <b class="text-uppercase">Caurumiņš</b>
-        </p>
-        <p>
-            Code
-            <b>290276-10001</b>
+            (290276-10001)
         </p>
     </div>
     <div class="video">
@@ -49,7 +43,7 @@
             <div *ngFor="let tag of imageTags;">{{ tag }}</div>
         </div>
     </div>
-    <div class="info">
+    <div class="info" *ngIf='imageProcessed'>
         <h1>Additional information</h1>
         <div>
             <label>Insured object (policy)</label>
@@ -68,7 +62,7 @@
             <textarea></textarea>
         </div>
     </div>
-    <div>
+    <div *ngIf='imageProcessed'>
         <button class="btn btn-primary">Submit</button>
     </div>
 </div>
