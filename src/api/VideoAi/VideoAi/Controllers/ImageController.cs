@@ -57,13 +57,20 @@ namespace VideoAi.Controllers
                                 },
                                 Values = new [,]
                                 {
+                                    // service documentation:
+                                    // https://studio.azureml.net/apihelp/workspaces/5137d13885304a649c232737fcde3a4e/webservices/dad1feca0be0497a971bcabf4c9bfd1a/endpoints/d5ffb6dc1a21464c8495c47c6d10ea43/score
+                                    
                                     // input structure: first is list of tags, second is empty element ("PolicyType")
+
+                                    {
+                                       String.Join(",", tags), String.Empty
+                                    }
 
                                     // Option 1: one image - one list
                                     // example for Kasko:
-                                    {
-                                        "road, tree, outdoor", "" 
-                                    }
+                                    //{
+                                    //   "road, tree, outdoor", "" 
+                                    //}
                                     // example for Household:
                                     //{
                                     //    "home, floor, bathroom", ""
@@ -82,12 +89,15 @@ namespace VideoAi.Controllers
                     },
                     GlobalParameters = new Dictionary<string, string>()
                 };
-                const string apiKey = "jMM04f8sJ+dPAR0WRFUg9YYGTIQIWHS0M7Q7Plgch3DJHKxyP84IONO50EmajmRU4RwPi3oSZ3AL5o/65AH9AQ=="; // Replace this with the API key for the web service
+
+                const string apiKey = "ZCuzusdlqZbL3LUmTPP+9sVL/VQXIFlZ4XlJYeU0LjUJfGhPvsz7vmsHltHKA5DO7Ud743EgvsHXKUdjScw66g==";
+
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5137d13885304a649c232737fcde3a4e/services/4d5d56df35fe4c98806cd7183b53086c/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5137d13885304a649c232737fcde3a4e/services/d5ffb6dc1a21464c8495c47c6d10ea43/execute?api-version=2.0&details=true");
                 
                 var content = new StringContent(JsonConvert.SerializeObject(scoreRequest), Encoding.UTF8, "application/json");
+
                 HttpResponseMessage response = await client.PostAsync("", content);
 
                 if (response.IsSuccessStatusCode)
