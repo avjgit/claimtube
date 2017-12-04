@@ -57,12 +57,25 @@ namespace VideoAi.Controllers
                                 },
                                 Values = new [,]
                                 {
+                                    // input structure: first is list of tags, second is empty element ("PolicyType")
+
+                                    // Option 1: one image - one list
+                                    // example for Kasko:
                                     {
-                                        "road", "tree"
-                                    },
-                                    {
-                                        "kasko", "home"
+                                        "road, tree, outdoor", "" 
                                     }
+                                    // example for Household:
+                                    //{
+                                    //    "home, floor, bathroom", ""
+                                    //}
+
+                                    // can be comma or just string separated, does not matter
+
+                                    // Option 2: pass each keyword in separate element, 
+                                    // but then logic to process response (calculate average probability from each element?) required
+                                    //{ "road", "" },
+                                    //{ "tree", "" },
+                                    //{ "outdoor", "" }
                                 }
                             }
                         }
