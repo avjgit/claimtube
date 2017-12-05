@@ -1,3 +1,13 @@
+@font-face {
+    font-family: GarageGothicForIf-Bold;
+    src: url('/StaticFiles/GarageGothicForIf-Bold.otf');
+}
+
+.outter {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
 .file-uploader {
     position: relative;
     overflow: hidden;
@@ -20,6 +30,7 @@
 }
 
 .claims-form {
+    color: #333;
     padding: 0 20px 40px 20px;
 }
 
@@ -170,24 +181,66 @@
 
 .client,
 .video,
-.info {
-    border: 1px solid #eee;
+.info{
     padding: 20px;
-    margin: 20px 0;
+    margin: 10px 0;
     vertical-align: top;
+}
+
+.submit {
+    margin: 40px 0 20px 0;
+    padding-left: 50px;
 }
 
 .client h1,
 .video h1,
 .info h1 {
     position: relative;
-    top: -30px;
-    font-size: 16px;
     margin: 0;
-    background-color: #fff;
-    display: inline-block;
-    padding: 0 10px;
+    display: block;
+    padding: 0 50px 20px 50px;
     color: #aaa;
+
+    font-family: GarageGothicForIf-Bold;
+    text-transform: uppercase;
+}
+
+.video h1:before,
+.info h1:before {
+    background-color: #888;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 2.2rem;
+    height: 35px;
+    left: 0;
+    padding-top: 7px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 35px;
+}
+
+.video h1.inactive,
+.info h1.inactive {
+    color: #ddd;
+}
+
+.video h1.inactive:before,
+.info h1.inactive:before {
+    background-color: #ddd;
+}
+
+.video h1:before{
+    content: "1";
+}
+
+.info h1:before{
+    content: "2";
+}
+
+.video .inner,
+.info .inner {
+    padding-left: 50px;
 }
 
 .debug-control {
