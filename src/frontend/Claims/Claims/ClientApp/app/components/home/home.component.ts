@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     imageCategories: string[];
     imageTags: string[];
     policyType: string = '';
+    plateNumber: string = '';
 
     allClientPolicies: any[];
     clientPolicies: any[];
@@ -152,6 +153,7 @@ export class HomeComponent implements OnInit {
                             this.imageCategories = r.categories;
                             this.imageTags = r.tags;
                             this.policyType = r.policyType;
+                            this.plateNumber = r.plateNumber;
 
                             this.clientPolicies = [];
 

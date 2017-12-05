@@ -33,6 +33,7 @@
                 </div>
                 <div class="video-results col-ms-3" *ngIf='debug && videoUploaded'>
                     <div *ngIf='policyType'>Policy type: {{ policyType }}</div>
+                    <div *ngIf='policyType'>Plate number: {{ plateNumber }}</div>
                     <div *ngFor="let tag of videoTags;">{{ tag }}</div>
                 </div>
                 <div class="image-results col-ms-3" *ngIf='debug && imageProcessed'>

@@ -24,6 +24,7 @@ namespace VideoAi.Controllers
         public string[] Captions { get; set; }
         public string[] Tags { get; set; }
         public string PolicyType { get; set; }
+        public string PlateNumber { get; set; }
     }
 
     [Produces("application/json")]
@@ -36,7 +37,26 @@ namespace VideoAi.Controllers
         {
             var imageData = await MakeAnalysisRequest(url);
             imageData.PolicyType = await IdentifyPolicyType(imageData.Tags);
+            try
+            {
+                imageData.PlateNumber = await GetPlateNumber(url);
+            }
+            catch (Exception)
+            {
+                
+            }
             return Ok(imageData);
+        }
+
+        public async Task<string> GetPlateNumber(string url)
+        {
+            HttpClient client = new HttpClient();
+            var bytes = await client.GetByteArrayAsync(url);
+            var content = Convert.ToBase64String(bytes);
+            var googleApi = new GoogleApiClient();
+            var response = googleApi.GetVehiclePlateAsync(content).Result;
+
+            return response.Replace("\n", "");
         }
 
         public async Task<string> IdentifyPolicyType(string[] tags)
