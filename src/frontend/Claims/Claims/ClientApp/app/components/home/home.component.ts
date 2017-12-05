@@ -60,9 +60,7 @@ export class HomeComponent implements OnInit {
     onSubmit(): void {
         this.submitted = true;
         setTimeout(() => {
-            this.videoUploaded = false;
-            this.imageProcessed = false;
-            this.submitted = false;
+            window.location.reload();
         }, 3000);
     }
 
