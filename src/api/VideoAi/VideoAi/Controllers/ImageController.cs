@@ -41,6 +41,15 @@ namespace VideoAi.Controllers
 
         public async Task<string> IdentifyPolicyType(string[] tags)
         {
+            if (tags.Contains("car"))
+            {
+                return "kasko";
+            }
+            if (tags.Contains("room"))
+            {
+                return "home";
+            }
+
             using (var client = new HttpClient())
             {
                 var scoreRequest = new
@@ -120,10 +129,10 @@ namespace VideoAi.Controllers
 
                 }
 
-                string responseContent = await response.Content.ReadAsStringAsync();
-                return responseContent;
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    return responseContent;
             }
-        }
+       }
 
         /// <summary>
         /// Gets the analysis of the specified image file by using the Computer Vision REST API.

@@ -59,9 +59,32 @@
                     <input class="date" type="text" placeholder="dd.mm.yyyy" />
                     <input class="time" type="text" placeholder="hh:mm" />
                 </div>
-                <div>
-                    <label>Location description</label>
-                    <textarea></textarea>
+                <div *ngIf='policyType == "kasko"'>
+                    <div>
+                        <label>Location description</label>
+                        <textarea></textarea>
+                    </div>
+                    <div>
+                        <label>Did you drive a car?</label>
+                        <input type="radio" id="drive_1" name="drive" value="1" />
+                        <label for="drive_1">Yes</label>
+                        <input type="radio" id="drive_2" name="drive" value="2" />
+                        <label for="drive_2">No</label>
+                    </div>
+                    <div>
+                        <label>Were you drunk?</label>
+                        <input type="radio" id="drunk_1" name="drunk" value="1" />
+                        <label for="drunk_1">Yes</label>
+                        <input type="radio" id="drunk_2" name="drunk" value="2" />
+                        <label for="drunk_2">No</label>
+                    </div>
+                    <div>
+                        <label>Are you crazy?</label>
+                        <input type="radio" id="crazy_1" name="crazy" value="1" />
+                        <label for="crazy_1">Yes</label>
+                        <input type="radio" id="crazy_2" name="crazy" value="2" />
+                        <label for="crazy_2">No</label>
+                    </div>
                 </div>
             </div>
             <div class="submit">
