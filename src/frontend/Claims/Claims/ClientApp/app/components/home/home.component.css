@@ -261,3 +261,20 @@
     font-weight: bold;
     color: green;
 }
+
+.location {
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.margin {
+    margin-left: 20px;
+}
+
+#map {
+    height: 300px;
+    width: 400px;
+}

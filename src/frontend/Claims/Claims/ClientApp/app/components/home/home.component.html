@@ -61,11 +61,15 @@
                     <input class="time" type="text" placeholder="hh:mm" />
                 </div>
                 <div *ngIf='policyType == "kasko"'>
-                    <div>
+                    <div class="location">
                         <label>Location description</label>
                         <textarea></textarea>
                     </div>
-                    <div>
+                    <div class="location margin">
+                        <button id="map_button" class="btn btn-primary" onclick='initMap()'>Set location on map</button>
+                        <div id="map"></div>
+                    </div>
+                    <div class="clear">
                         <label>Did you drive a car?</label>
                         <input type="radio" id="drive_1" name="drive" value="1" />
                         <label for="drive_1">Yes</label>

@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     imageCaptions: string[];
     imageCategories: string[];
     imageTags: string[];
-    policyType: string;
+    policyType: string = '';
 
     allClientPolicies: any[];
     clientPolicies: any[];

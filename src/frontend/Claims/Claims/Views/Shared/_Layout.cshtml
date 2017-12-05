@@ -11,6 +11,53 @@
 <body>
     @RenderBody()
 
+    <script type="text/javascript">
+        var map;
+        var markers = [];
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: { lat: 56.955193, lng: 24.0941903 },
+            });
+
+            map.addListener('click', function (event) {
+                addMarker(event.latLng);
+            });
+        }
+
+        function addMarker(location) {
+            clearMarkers();
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+            markers.push(marker);
+        }
+
+        function setMapOnAll(map) {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
+            }
+        }
+
+        function clearMarkers() {
+            setMapOnAll(null);
+        }
+
+        function showMarkers() {
+            setMapOnAll(map);
+        }
+
+        function deleteMarkers() {
+            clearMarkers();
+            markers = [];
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM1W1fWJd0z6JF5g_c7L7-CxUZW2RorDw">
+    </script>
+
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
