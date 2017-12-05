@@ -255,3 +255,9 @@
 .info textarea {
     width: 310px;
 }
+
+.submitted {
+    font-size: 48px;
+    font-weight: bold;
+    color: green;
+}

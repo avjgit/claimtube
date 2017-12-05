@@ -5,7 +5,8 @@
     </div>
     <h1>Claim</h1>
 
-    <div class="outter">
+    <div class="submitted" *ngIf='submitted'>Claim successfully submitted!</div>
+    <div class="outter" *ngIf='!submitted'>
         <div class="client">
             <b class="text-uppercase">Slāviks</b>
             <b class="text-uppercase">Caurumiņš</b>
@@ -88,7 +89,7 @@
                 </div>
             </div>
             <div class="submit">
-                <button class="btn btn-primary" [disabled]='!imageProcessed'>Submit</button>
+                <button class="btn btn-primary" [disabled]='!imageProcessed' (click)='onSubmit()'>Submit</button>
             </div>
         </div>
     </div>

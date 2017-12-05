@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     videoTags: string[];
 
     debug: boolean = false;
+    submitted: boolean = false;
     imageProcessed: boolean = false;
     imageCaptions: string[];
     imageCategories: string[];
@@ -54,6 +55,15 @@ export class HomeComponent implements OnInit {
         this.progress = 0;
         this.somethingChanged();
         this.makeFileRequest(this.urlToUpload + 'video', [], files);
+    }
+
+    onSubmit(): void {
+        this.submitted = true;
+        setTimeout(() => {
+            this.videoUploaded = false;
+            this.imageProcessed = false;
+            this.submitted = false;
+        }, 3000);
     }
 
     private loadDone(): void {
