@@ -20,12 +20,14 @@ export class HomeComponent implements OnInit {
     videoProcessProgress: string;
     videoTags: string[];
 
-    debug: boolean = true;
+    debug: boolean = false;
     imageProcessed: boolean = false;
     imageCaptions: string[];
     imageCategories: string[];
     imageTags: string[];
+    policyType: string;
 
+    allClientPolicies: any[];
     clientPolicies: any[];
 
     constructor(
@@ -35,7 +37,7 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
         this.http.get(this.urlToUpload + 'policies')
             .subscribe(result => {
-                this.clientPolicies = result.json();
+                this.allClientPolicies = result.json();
             },
             error => console.error(error));
     }
@@ -55,12 +57,12 @@ export class HomeComponent implements OnInit {
     }
 
     private loadDone(): void {
-        this.isLoading = false;
+
         this.loaded = true;
         this.somethingChanged();
         setTimeout((): void => {
             this.loaded = false;
-            this.progress = 0;
+
             this.hasError = false;
             this.somethingChanged();
         }, 1000);
@@ -117,7 +119,7 @@ export class HomeComponent implements OnInit {
 
     private onVideoUploaded(id: string): void {
 
-        this.videoUploaded = true;
+
         this.http.get(this.urlToUpload + 'video/' + id + '/state')
             .subscribe(result => {
                 let r: any = result.json();
@@ -132,10 +134,24 @@ export class HomeComponent implements OnInit {
                     this.http.get(this.urlToUpload + 'image/process_image/?url=' + encodeURIComponent(this.videoUrl))
                         .subscribe(result => {
                             let r: any = result.json();
+
+                            this.isLoading = false;
+                            this.videoUploaded = true;
+                            this.progress = 0;
+
                             this.imageProcessed = true;
                             this.imageCaptions = r.captions;
                             this.imageCategories = r.categories;
                             this.imageTags = r.tags;
+                            this.policyType = r.policyType;
+
+                            this.clientPolicies = [];
+
+                            this.allClientPolicies.forEach(e => {
+                                if (e.policyType === this.policyType) {
+                                    this.clientPolicies.push(e);
+                                }
+                            })
 
                         }, error => console.error(error))
                 }

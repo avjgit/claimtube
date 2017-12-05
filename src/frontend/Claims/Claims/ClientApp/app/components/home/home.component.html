@@ -31,6 +31,7 @@
                     <img *ngIf='videoUrl' [src]='videoUrl' width="300" height="200" />
                 </div>
                 <div class="video-results col-ms-3" *ngIf='debug && videoUploaded'>
+                    <div *ngIf='policyType'>Policy type: {{ policyType }}</div>
                     <div *ngFor="let tag of videoTags;">{{ tag }}</div>
                 </div>
                 <div class="image-results col-ms-3" *ngIf='debug && imageProcessed'>
@@ -50,7 +51,7 @@
                     <label>Insured object (policy)</label>
                     <select>
                         <option class="unknown" value="0">Unknown</option>
-                        <option *ngFor="let policy of clientPolicies;" value="policy.number">{{ policy.description }} ({{policy.number}})</option>
+                        <option *ngFor="let policy of clientPolicies;" selected="selected" value="policy.number">{{ policy.description }} ({{policy.number}})</option>
                     </select>
                 </div>
                 <div>

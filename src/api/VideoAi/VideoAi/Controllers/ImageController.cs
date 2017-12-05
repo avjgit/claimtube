@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 using VideoAi.Model;
 
 namespace VideoAi.Controllers
@@ -51,19 +52,19 @@ namespace VideoAi.Controllers
                             "input1",
                             new StringTable
                             {
-                                ColumnNames = new []
+                                ColumnNames = new[]
                                 {
                                     "Description", "PolicyType"
                                 },
-                                Values = new [,]
+                                Values = new[,]
                                 {
                                     // service documentation:
                                     // https://studio.azureml.net/apihelp/workspaces/5137d13885304a649c232737fcde3a4e/webservices/dad1feca0be0497a971bcabf4c9bfd1a/endpoints/d5ffb6dc1a21464c8495c47c6d10ea43/score
-                                    
+
                                     // input structure: first is list of tags, second is empty element ("PolicyType")
 
                                     {
-                                       String.Join(",", tags), String.Empty
+                                        String.Join(",", tags), String.Empty
                                     }
 
                                     // Option 1: one image - one list
@@ -95,7 +96,7 @@ namespace VideoAi.Controllers
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
                 client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5137d13885304a649c232737fcde3a4e/services/d5ffb6dc1a21464c8495c47c6d10ea43/execute?api-version=2.0&details=true");
-                
+
                 var content = new StringContent(JsonConvert.SerializeObject(scoreRequest), Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = await client.PostAsync("", content);
@@ -103,16 +104,27 @@ namespace VideoAi.Controllers
                 if (response.IsSuccessStatusCode)
                 {
                     string result = await response.Content.ReadAsStringAsync();
-                    return result;
+
+                    var o = JObject.Parse(result);
+                    try
+                    {
+                        var r = (string) o["Results"]["output1"]["value"]["Values"]
+                            ?.LastOrDefault()
+                            ?.LastOrDefault();
+                        return r;
+                    }
+                    catch (Exception)
+                    {
+                        return result;
+                    }
+
                 }
-                else
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    return responseContent;
-                }
+
+                string responseContent = await response.Content.ReadAsStringAsync();
+                return responseContent;
             }
         }
-        
+
         /// <summary>
         /// Gets the analysis of the specified image file by using the Computer Vision REST API.
         /// </summary>
