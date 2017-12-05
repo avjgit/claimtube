@@ -41,13 +41,22 @@ namespace VideoAi.Controllers
 
         public async Task<string> IdentifyPolicyType(string[] tags)
         {
-            if (tags.Contains("car"))
+            //if (tags.Contains("car"))
+            //{
+            //    return "kasko";
+            //}
+            //if (tags.Contains("room"))
+            //{
+            //    return "home";
+            //}
+
+            var tagsCount = tags.Count();
+            var values = new string[tagsCount, 2];
+
+            for (int i = 0; i < tagsCount; i++)
             {
-                return "kasko";
-            }
-            if (tags.Contains("room"))
-            {
-                return "home";
+                values[i, 0] = tags[i];
+                values[i, 1] = "";
             }
 
             using (var client = new HttpClient())
@@ -65,35 +74,36 @@ namespace VideoAi.Controllers
                                 {
                                     "Description", "PolicyType"
                                 },
-                                Values = new[,]
-                                {
-                                    // service documentation:
-                                    // https://studio.azureml.net/apihelp/workspaces/5137d13885304a649c232737fcde3a4e/webservices/dad1feca0be0497a971bcabf4c9bfd1a/endpoints/d5ffb6dc1a21464c8495c47c6d10ea43/score
+                                Values = values
+                                //Values = new[,]
+                                //{
+                                //    // service documentation:
+                                //    // https://studio.azureml.net/apihelp/workspaces/5137d13885304a649c232737fcde3a4e/webservices/dad1feca0be0497a971bcabf4c9bfd1a/endpoints/d5ffb6dc1a21464c8495c47c6d10ea43/score
 
-                                    // input structure: first is list of tags, second is empty element ("PolicyType")
+                                //    // input structure: first is list of tags, second is empty element ("PolicyType")
 
-                                    {
-                                        String.Join(",", tags), String.Empty
-                                    }
+                                //    {
+                                //        String.Join(",", tags), String.Empty
+                                //    }
 
-                                    // Option 1: one image - one list
-                                    // example for Kasko:
-                                    //{
-                                    //   "road, tree, outdoor", "" 
-                                    //}
-                                    // example for Household:
-                                    //{
-                                    //    "home, floor, bathroom", ""
-                                    //}
+                                //    // Option 1: one image - one list
+                                //    // example for Kasko:
+                                //    //{
+                                //    //   "road, tree, outdoor", "" 
+                                //    //}
+                                //    // example for Household:
+                                //    //{
+                                //    //    "home, floor, bathroom", ""
+                                //    //}
 
-                                    // can be comma or just string separated, does not matter
+                                //    // can be comma or just string separated, does not matter
 
-                                    // Option 2: pass each keyword in separate element, 
-                                    // but then logic to process response (calculate average probability from each element?) required
-                                    //{ "road", "" },
-                                    //{ "tree", "" },
-                                    //{ "outdoor", "" }
-                                }
+                                //    // Option 2: pass each keyword in separate element, 
+                                //    // but then logic to process response (calculate average probability from each element?) required
+                                //    //{ "road", "" },
+                                //    //{ "tree", "" },
+                                //    //{ "outdoor", "" }
+                                //}
                             }
                         }
                     },
@@ -117,9 +127,32 @@ namespace VideoAi.Controllers
                     var o = JObject.Parse(result);
                     try
                     {
-                        var r = (string) o["Results"]["output1"]["value"]["Values"]
-                            ?.LastOrDefault()
-                            ?.LastOrDefault();
+                        var tmp = o["Results"]["output1"]["value"]["Values"];
+                        var r1 = 0M;
+                        var r = "";
+
+                        foreach (var t in tmp)
+                        {
+                            var tmp1 = (decimal)t[2];
+                            var tmp2 = (decimal)t[3];
+
+                            if (tmp1 > tmp2
+                                && tmp1 > r1)
+                            {
+                                r1 = tmp1;
+                                r = (string) t[4];
+                            }
+                            else if(tmp2 > tmp1
+                                   && tmp2 > r1)
+                            {
+                                r1 = tmp2;
+                                r = (string)t[4];
+                            }
+                        }
+                        
+                        //var res = (string) o["Results"]["output1"]["value"]["Values"]
+                        //    ?.LastOrDefault()
+                        //    ?.LastOrDefault();
                         return r;
                     }
                     catch (Exception)
